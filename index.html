@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>资源分类</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/plugins/jquery.fullPage/jquery.fullPage.css">
+        <style>
+        </style>
+    </head>
+    <body>
+        <article>
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li data-menuanchor="course" class="active"><a href="#course">教程资料</a></li>
+                        <li data-menuanchor="synthesize"><a href="#synthesize">综合类</a></li>
+                        <li data-menuanchor="plugin"><a href="#plugin">插件类</a></li>
+                        <li data-menuanchor="material"><a href="#material">素材类</a></li>
+                        <li data-menuanchor="other"><a href="#other">其他</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="dowebok-body">
+                <div class="section course"></div>
+                <div class="section synthesize"></div>
+                <div class="section plugin"></div>
+                <div class="section material"></div>
+                <div class="section other"></div>
+            </div>
+        </article>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script src="/js/jquery-3.1.1.min.js"><\\/script>')</script>
+    <script src="/js/category.js"></script>
+    <script src="/plugins/jquery.fullPage/jquery.fullPage.min.js"></script>
+    <script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script>!window.jQuery.easing && document.write('<script src="/js/jquery.easing.js"><\\/script>')</script>
+    <script>
+        $(function () {
+            'use strict'
+            //分类
+            var course = [
+                {
+                    'type': 'color-1 width-20 height-2x',
+                    'url': 'javascript:void(0)',
+                    'name': '教程资料'
+                },
+                {
+                    'type': 'color-2 width-25',
+                    'url': 'http://www.w3school.com.cn/',
+                    'name': 'W3School'
+                },
+                {
+                    'type': 'color-3 width-15',
+                    'url': 'https://developer.mozilla.org/zh-CN/',
+                    'name': 'MDN'
+                },
+                {
+                    'type': 'color-4 width-25',
+                    'url': 'http://www.runoob.com/',
+                    'name': '菜鸟教程'
+                },
+                {
+                    'type': 'color-5 width-15',
+                    'url': 'http://www.css88.com/',
+                    'name': 'WEB前端开发'
+                },
+                {
+                    'type': 'color-6 width-15',
+                    'url': 'http://www.hubwiz.com/',
+                    'name': '汇智网'
+                },
+                {
+                    'type': 'color-7 width-25',
+                    'url': 'http://fex.baidu.com/',
+                    'name': 'FEX'
+                },
+                {
+                    'type': 'color-8 width-15',
+                    'url': 'http://div.io/#/welcome',
+                    'name': 'Div.IO'
+                },
+                {
+                    'type': 'color-9 width-25',
+                    'url': 'http://www.imooc.com/',
+                    'name': '慕课网'
+                },
+                {
+                    'type': 'color-10 width-20',
+                    'url': 'http://www.icoolxue.com/',
+                    'name': '爱酷'
+                },
+                {
+                    'type': 'color-11 width-20',
+                    'url': 'https://www.shiyanlou.com/',
+                    'name': '实验楼'
+                }
+            ];
+            var synthesize = [
+                {
+                    'type': 'color-15 width-20 height-2x',
+                    'url': 'javascript:void(0)',
+                    'name': '综合类'
+                },
+                {
+                    'type': 'color-2 width-25',
+                    'url': 'http://www.w3cfuns.com/',
+                    'name': '前端网'
+                },
+                {
+                    'type': 'color-3 width-15',
+                    'url': 'http://www.jqshare.com/index.html',
+                    'name': 'JQ分享网'
+                },
+                {
+                    'type': 'color-4 width-25',
+                    'url': 'http://www.jobbole.com/',
+                    'name': '伯乐在线'
+                },
+                {
+                    'type': 'color-5 width-15',
+                    'url': 'http://www.wufangbo.com/',
+                    'name': '前端开发'
+                },
+                {
+                    'type': 'color-6 width-15',
+                    'url': 'http://www.html5tricks.com/',
+                    'name': 'HTML5 Tricks'
+                },
+                {
+                    'type': 'color-7 width-25',
+                    'url': 'http://www.codeceo.com/',
+                    'name': '码农网'
+                },
+                {
+                    'type': 'color-8 width-15',
+                    'url': 'http://www.html5jq.com/index.html',
+                    'name': 'HTML5吧'
+                },
+                {
+                    'type': 'color-9 width-25',
+                    'url': 'http://gold.xitu.io/',
+                    'name': '掘金'
+                }
+            ];
+            var plugin = [
+                {
+                    'type': 'color-1 width-20 height-2x',
+                    'url': 'javascript:void(0)',
+                    'name': '插件类'
+                },
+                {
+                    'type': 'color-2 width-25',
+                    'url': 'http://www.jq22.com/',
+                    'name': 'jQuery插件库'
+                },
+                {
+                    'type': 'color-3 width-15',
+                    'url': 'http://www.lanrenzhijia.com/',
+                    'name': '懒人之家'
+                },
+                {
+                    'type': 'color-4 width-25',
+                    'url': 'http://www.jianbaizhan.com/',
+                    'name': '建百站'
+                },
+                {
+                    'type': 'color-5 width-15',
+                    'url': 'http://www.htmleaf.com/',
+                    'name': 'jQuery之家'
+                },
+                {
+                    'type': 'color-6 width-15',
+                    'url': 'http://www.jqcool.net/',
+                    'name': 'jQ酷'
+                },
+                {
+                    'type': 'color-7 width-25',
+                    'url': 'http://www.dowebok.com/',
+                    'name': 'Dowebok'
+                }
+            ];
+            var material = [
+                {
+                    'type': 'color-1 width-20 height-2x',
+                    'url': 'javascript:void(0)',
+                    'name': '素材类'
+                },
+                {
+                    'type': 'color-2 width-25',
+                    'url': 'http://www.lanrentuku.com/',
+                    'name': '懒人图库'
+                },
+                {
+                    'type': 'color-3 width-15',
+                    'url': 'http://www.zcool.com.cn/',
+                    'name': '站酷'
+                },
+                {
+                    'type': 'color-4 width-25',
+                    'url': 'http://hao.xueui.cn/',
+                    'name': 'UI设计导航'
+                }
+            ];
+            var other = [
+                {
+                    'type': 'color-1 width-20 height-2x',
+                    'url': 'javascript:void(0)',
+                    'name': '其他'
+                },
+                {
+                    'type': 'color-2 width-25',
+                    'url': 'http://uedfans.cn/',
+                    'name': 'UEDfans'
+                },
+                {
+                    'type': 'color-3 width-15',
+                    'url': 'http://stackoverflow.com/',
+                    'name': 'stackoverflow'
+                },
+                {
+                    'type': 'color-4 width-25',
+                    'url': 'http://www.nowcoder.com/3759729',
+                    'name': '牛客网'
+                }
+            ];
+            $('.course').category(course);
+            $('.synthesize').category(synthesize);
+            $('.plugin').category(plugin);
+            $('.material').category(material);
+            $('.other').category(other);
+            //全屏滚动
+            var $courseC = $('.course .cate-container');
+            var $synthesizeC = $('.synthesize .cate-container');
+            var $pluginC = $('.plugin .cate-container');
+            var $materialC = $('.material .cate-container');
+            var $otherC = $('.other .cate-container');
+            $courseC.animate({
+                bottom: '0'
+            }, 1500, 'easeOutExpo');
+            $('.dowebok-body').fullpage({
+                sectionsColor: ['#1bbc9b', '#03a7f5', '#7BAABE', '#f90', '#7BAABE'],
+                anchors: ['course', 'synthesize', 'plugin', 'material', 'other'],
+                menu: '#menu',
+                continuousVertical: true,
+                afterLoad: function (anchorLink, index) {
+                    switch (index) {
+                        case 1:
+                            $courseC.animate({
+                                bottom: '0'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 2:
+                            $synthesizeC.animate({
+                                bottom: '0'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 3:
+                            $pluginC.animate({
+                                bottom: '0'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 4:
+                            $materialC.animate({
+                                bottom: '0'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 5:
+                            $otherC.animate({
+                                bottom: '0'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        default:
+                            break;
+                    }
+                },
+                onLeave: function (index, direction) {
+                    switch (index) {
+                        case 1:
+                            $courseC.delay(500).animate({
+                                bottom: '-120%'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 2:
+                            $synthesizeC.delay(500).animate({
+                                bottom: '-120%'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 3:
+                            $pluginC.delay(500).animate({
+                                bottom: '-120%'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 4:
+                            $materialC.delay(500).animate({
+                                bottom: '-120%'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        case 5:
+                            $otherC.delay(500).animate({
+                                bottom: '-120%'
+                            }, 1500, 'easeOutExpo');
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
+            var $ww = $(window).width();
+            if ($ww < 1024) {
+                $.fn.fullpage.setAutoScrolling(false);
+            } else {
+                $.fn.fullpage.setAutoScrolling(true);
+            }
+        });
+    </script>
+</html>
