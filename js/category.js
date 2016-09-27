@@ -6,7 +6,7 @@
             $.each(options, function (i, c) {
                 $ul.append([
                     '<li class="', c['type'], '">',
-                        '<a href="', c['url'], '">',
+                        '<a href="', c['url'], '" target="_blank">',
                             '<div class="name">', c['name'],'</div>',
                         '</a>',
                     '</li>'
