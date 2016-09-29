@@ -139,6 +139,9 @@ header {
 .section { text-align: center; font: 24px "Microsoft Yahei"; color: #fff; overflow: hidden;}
 
 @media (max-width: 768px) {
+    .cate-container {
+        margin-top: 40px;
+    }
     .section {
         font-size: 14px;
     }
