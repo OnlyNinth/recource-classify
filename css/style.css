@@ -137,3 +137,21 @@ header {
 #menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
 #menu .active a { color: #fff; background-color: #333;}
 .section { text-align: center; font: 24px "Microsoft Yahei"; color: #fff; overflow: hidden;}
+
+@media (max-width: 768px) {
+    .section {
+        font-size: 14px;
+    }
+    .category-ul .height-2x {
+        height: 120px;
+    }
+    .category-ul .height-2x .name {
+        line-height: 120px;
+    }
+    .category-ul li {
+        height: 60px;
+    }
+    .category-ul .name {
+        line-height: 55px;
+    }
+}
